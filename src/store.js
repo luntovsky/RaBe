@@ -8,8 +8,12 @@ export default new Vuex.Store({
     drawer: true
   },
   mutations: {
-    toggleDrawer(state){
+    TOOGLE_DRAWER(state){
       state.drawer = !state.drawer
     }
-  }
+  },
+  actions: {
+    toggleDrawer({ commit }, state) {
+      commit('TOOGLE_DRAWER', state)
+    }
 })
